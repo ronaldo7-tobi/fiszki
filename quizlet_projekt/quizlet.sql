@@ -84,6 +84,7 @@ INSERT INTO `slowa` (`id_slowa`, `id_paczki`, `polski`, `angielski`) VALUES
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `login` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `is_admin` tinyint(1) NOT NULL DEFAULT 0
