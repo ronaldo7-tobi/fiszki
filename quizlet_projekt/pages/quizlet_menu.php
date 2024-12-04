@@ -48,6 +48,9 @@
         <div class="exercise">
             <button onclick="window.location.href='exercise.php';">Przejdź do ćwiczeń</button>
         </div>
+        <div class="exercise">
+            <button onclick="window.location.hreef='share_pack.php';">Udostępnij paczkę</button>
+        </div>
     </section>
 </body>
 </html>
