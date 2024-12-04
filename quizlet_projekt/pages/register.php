@@ -24,7 +24,7 @@
             <input type="text" id="login" name="login" required>
 
             <label for="passsword">Hasło: </label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required><br>
 
             <input type="submit" value="Zarejestruj">
             <p>Jeśli posiadasz konto: <a href="login.php"> Zaloguj się</a></p>

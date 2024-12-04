@@ -20,12 +20,7 @@
             <input type="number" id="number_of_words" name="number_of_words" required> <br><br>
 
             <input type="submit" value="Zapisz">
-        </form>
-        
-        <!-- Do poprawy -->
-        <p>Test użytkownika: <?php echo $user['login']; ?></p>
-        <button onclick="window.location.href = 'quizlet_menu.php?username=<?php echo $user['login']; ?>';">Wróć do menu</button>
-        
+        </form>   
     </section>
 
     <?php
@@ -74,11 +69,10 @@
             echo '<form method="POST" action="create_pack.php">';
             echo '<input type="hidden" name="id_paczki" value="' . $id_paczki . '">'; // Przekazujemy id paczki jako ukryte pole
             for ($i = 0; $i < $_POST['number_of_words']; $i++) {
-                echo '<label>Polskie słowo ' . ($i + 1) . ':</label>';
-                echo '<input type="text" name="polish[]" required>';
-
-                echo '<label>Angielskie słowo ' . ($i + 1) . ':</label>';
-                echo '<input type="text" name="english[]" required>';
+                echo '<div class="form_column">';
+                echo '<label>Polskie słowo: <input type="text" name="polish[]" required></label>';
+                echo '<label>Angielskie słowo: <input type="text" name="english[]" required></label>';
+                echo '</div>';
             }
             echo '<input type="submit" value="Zapisz słówka">';
             echo '</form>';
@@ -95,5 +89,9 @@
             exit();
         }
     ?>
+
+    <!-- Do poprawy -->
+    <p>Test użytkownika: <?php echo "$user_id"; ?></p>
+    <button onclick="window.location.href = 'quizlet_menu.php?username=<?php echo $user['login']; ?>';">Wróć do menu</button>
 </body>
 </html>

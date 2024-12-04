@@ -54,9 +54,9 @@
         $correctAnswer = $_POST['correct_answer'];
 
         if (strtolower($userAnswer) === strtolower($correctAnswer)) {
-            $message = "<p class='message'>Brawo! Dobra odpowiedź!</p>";
+            $message = "<p class='message'><span class='green'>Brawo!</span> Dobra odpowiedź!</p>";
         } else {
-            $message = "<p class='message error'>Źle! Poprawna odpowiedź to: <strong>$correctAnswer</strong>.</p>";
+            $message = "<p class='message'><span class='red_error'>Źle!</span> Poprawna odpowiedź to: <strong>$correctAnswer</strong>.</p>";
         }
 
         // Pobierz nowe słowo z tego samego pakietu
@@ -77,7 +77,7 @@
 
     <section>
         <?php if (!$packsAvailable): ?>
-            <p>Brak pakietów do nauki. Dodaj pakiety w menu głównym.</p>
+            <h3>Brak pakietów do nauki. Dodaj pakiety w menu głównym.</h3>
         <?php else: ?>
             <form method="POST">
                 <label for="selected_pack">Wybierz pakiet do nauki:</label>
@@ -97,7 +97,7 @@
         <section>
             <?php echo $message; ?>
             <div class="question-box">
-                <p><strong>Pytanie:</strong> Jak po angielsku jest słowo <strong><?php echo $polishWord; ?></strong>?</p>
+                <p class="question"><strong>Pytanie:</strong> Jak po angielsku jest słowo <strong><?php echo $polishWord; ?></strong>?</p>
                 <form method="POST">
                     <input type="text" name="user_answer" placeholder="Twoja odpowiedź" required>
                     <input type="hidden" name="correct_answer" value="<?php echo $correctAnswer; ?>">
@@ -107,6 +107,7 @@
             </div>
         </section>
         
+        <!-- Do poprawy -->
         <button onclick="window.location.href = 'quizlet_menu.php?username=<?php echo $user['login']; ?>';">Wróć do menu</button>
     <?php endif; ?>
 </body>

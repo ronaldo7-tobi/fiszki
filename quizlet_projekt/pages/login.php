@@ -18,9 +18,9 @@
             <input type="text" id="login" name="login" required>
 
             <label for="password">Hasło: </label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required><br>
 
-            <input type="submit" value="Zaloguj">
+            <input type="submit" value="Zaloguj"><br>
             <button onclick="window.location.href='index.php';">Strona główna</button>
         </form>
     </section>

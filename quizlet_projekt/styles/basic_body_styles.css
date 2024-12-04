@@ -28,3 +28,19 @@ header h3 {
 ul {
     list-style-type: none;
 }
+
+p.question {
+    font-size: 2rem;
+}
+
+p.message{
+    font-size: 2rem;
+}
+
+span.green{
+    color: green;
+}
+
+span.red_error{
+    color: red;
+}
