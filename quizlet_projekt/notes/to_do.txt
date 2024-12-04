@@ -1,0 +1,2 @@
+1. refaktoryzacja create_pack.php i exercise.php
+2. naprawienie przycisku wracania do menu w create_pack.php i exercise.php
