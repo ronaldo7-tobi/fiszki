@@ -1,0 +1,17 @@
+Poniżej kod sprawdzający wartość zmiennej sesji id użytkownika:
+
+if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    die("Błąd: Użytkownik nie jest zalogowany lub `id` użytkownika nie zostało ustawione w sesji.");
+} else {
+    echo "Debug: `user_id` w sesji = " . $_SESSION['id'];
+}
+
+
+
+sprawdzenie zmiennych sesji 
+
+if (isset($_SESSION['id'])) {
+    echo "Zalogowany jako: " . $_SESSION['id'] . " " . $_SESSION['login'];
+} else {
+    echo "Brak aktywnej sesji.";
+}
