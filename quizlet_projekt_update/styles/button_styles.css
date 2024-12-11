@@ -1,0 +1,47 @@
+button {
+    width: 150px;
+    height: 40px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #f39c12, #d35400);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+    transform: translateY(5%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Przycisk archiwizacji paczki */
+.button_archive {
+    background-color: #ff9800; 
+    color: #fff;
+    border: none;
+    border-radius: 25px; 
+    margin-top: 5px;
+    padding: 8px 20px; 
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    text-transform: uppercase;
+}
+
+.button_archive:hover {
+    background-color: #e68900; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); 
+    transform: translateY(-2px); 
+}
+
+.button_archive:active {
+    transform: translateY(1px) scale(0.98); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
